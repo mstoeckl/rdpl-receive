@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# This is the init script for rdpl-receive. 
+
+#   INSTALLATION INSTRUCTIONS
+# Copy me into /etc/init.d/ and run
+# 
+# >> chmod +x /etc/init.d/rdpl
+# >> update-rc.d rdpl defaults
+# >> reboot
+
+case "$1" in
+  start)
+        # Launch program
+        . /home/lvuser/rdpl-receive
+        ;;
+  stop)
+        # Elimate all copies of the program
+        killall rdpl-receive
+        ;;
+esac
