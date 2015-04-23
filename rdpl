@@ -12,10 +12,10 @@
 case "$1" in
   start)
         # Launch program
-        . /home/lvuser/rdpl-receive
+        pushd /home/lvuser
+        ./rdpl-receive &
+        popd
         ;;
   stop)
         # Elimate all copies of the program
-        killall rdpl-receive
-        ;;
-esac
+        killall
