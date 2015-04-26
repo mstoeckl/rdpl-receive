@@ -18,4 +18,6 @@ case "$1" in
         ;;
   stop)
         # Elimate all copies of the program
-        killall
+        killall rdpl-receive
+        ;;
+esac
